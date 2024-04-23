@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0; /* Remove default body margin */
+}
+
+.wrapper {
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 500px; /* Limit maximum width for larger screens */
+    border: 1px solid #000;
+    margin: 20px;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Increased padding for outer box */
+}
+
+body h1 {
+    padding: 10px;
+    background-color: #081b31;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Adjust font size for responsiveness */
+}
+
+.choices {
+    width: 90%;
+    max-width: 400px; /* Limit maximum width for larger screens */
+    display: flex;
+    flex-wrap: wrap; /* Allow choices to wrap to the next line on smaller screens */
+    justify-content: space-between;
+    gap: 20px; /* Add some space between choices */
+}
+
+.choice {
+    width: calc(33.33% - 20px); /* Adjust choice width for responsiveness */
+    max-width: 110px; /* Limit maximum width for larger screens */
+    margin-bottom: 20px;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.choice:hover {
+    background-color: #081b31;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.choice img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    border: 1px solid #000;
+    object-fit: cover;
+}
+
+.score-board {
+    width: 90%;
+    max-width: 400px; /* Limit maximum width for larger screens */
+    display: flex;
+    flex-direction: row; /* Change to column layout on smaller screens */
+    align-items: center;
+    font-size: 1.5rem; /* Adjust font size for responsiveness */
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.score p {
+    font-weight: bold;
+    margin-bottom: 5px; /* Add some space between score elements */
+}
+
+#msg {
+    font-weight: bold;
+    margin: 1.5rem;
+    font-size: 1.2rem;
+    background-color: #081b31;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#user-score,
+#comp-score {
+    font-size: 3rem; /* Adjust font size for responsiveness */
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <Script type="text/javascript">
+        function clearAllFields() {
+            document.getElementById("num1").value = "";
+            document.getElementById("num2").value = "";
+            document.getElementById("res").value = "";
+            document.getElementById("num1").focus();
+        };
+        function setFocusOnLoad() {
+            document.getElementById("num1").focus();
+        };
+
+        function checkEmptyField() {
+            if (document.getElementById("num1").value.length == 0) {
+                alert("enter the first number");
+                document.getElementById("num1").focus();
+            } else if (document.getElementById("num2").value.length == 0) {
+                alert("enter the number second");
+                document.getElementById("num2").focus();
+            }
+        };
+        function doTask(id) {
+            checkEmptyField();
+            var first_num = parseInt(document.getElementById("num1").value);
+            var second_num = parseInt(document.getElementById("num2").value);
+            if (id == "add") {
+                var result = first_num + second_num;
+
+            } else if (id == "mul") {
+                var result = first_num * second_num;
+
+            } else if (id == "sub") {
+                var result = first_num - second_num;
+
+            } else if (id == "div") {
+                var result = first_num / second_num;
+
+            }
+
+            document.getElementById("res").value = result;
+
+        };
+    </Script>
+</head>
+
+<body onload="setFocusOnLoad()">
+
+    <div class="box">
+
+        <table>
+            <th>
+            <td>
+                <h1>Apana calculator</h1>
+            </td>
+            </th>
+            <tr>
+                <td>Enter the first number </td>
+                <td><input type="text" id="num1" autocomplete="off" /></td>
+            </tr>
+            <tr>
+                <td>Enter the second number </td>
+                <td><input type="text" id="num2" autocomplete="off" /></td>
+            </tr>
+            <tr>
+                <td>Result </td>
+                <td><input type="text" id="res" autocomplete="off" readonly /></td>
+            </tr>
+            <div class="operationbutton">
+
+                <td><button type="submit" id="add" onclick="doTask(id)"><label for="text">ADD</label></button>
+
+                    <button type="submit" id="sub" onclick="doTask(id)"><label for="text">SUB</label></button>
+
+
+                    <button type="submit" id="mul" onclick="doTask(id)"><label for="text">MUL</label></button>
+
+                    <button type="submit" id="div" onclick="doTask(id)"><label for="text">DIV</label></button>
+                </td>
+
+            </div>
+            <tr>
+                <td><button type="submit" onclick="clearAllFields()">CLEAR</button></td>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+
+</body>
+
+</html>

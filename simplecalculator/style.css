@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(180, 180, 214);
+}
+
+.box {
+
+
+    width: 500px;
+    min-height: 200px;
+    margin: 120px auto;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: whitesmoke;
+}
+
+.box tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.operationbutton {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.box tr td input {
+    /* border: 1px solid #000; */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+button :hover {
+    color: blue;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 768px) {
+    .box {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 6px 12px;
+    }
+}
